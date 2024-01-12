@@ -1,0 +1,27 @@
+$border-radius: 5px;
+
+.libtech {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+  background-color: lightgray;
+  height: 10px;
+  border-radius: $border-radius;
+}
+
+.inner {
+  height: 100%;
+  background-color: lightpink;
+  border-radius: $border-radius;
+
+  transition: width 150ms linear;
+}
+
+.label {
+  font-size: 10px;
+  padding: 0 5px;
+}
