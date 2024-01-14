@@ -7,16 +7,16 @@ import React, { FC } from "react";
 // import Timer from '../Timer/Timer';
 // import TimerUseTimeout from '../TimerUseTimeout/TimerUseTimeout';
 // import Space from '../Rockets/Space/Space';
+// import LibTechDemo from "../LibTech/LibTechDemo";
+// import { WindowListener } from "../WindowListener/WindowListener";
+import TodoApp from "../TodoList/TodoApp";
 
 import "./App.scss";
-import { WindowListener } from "../WindowListener/WindowListener";
-import LibTechDemo from "../LibTech/LibTechDemo";
 
 const App: FC = () => {
   return (
     <div className="App">
-      <LibTechDemo />
-      <WindowListener event="click" handler={() => console.log("click")} />
+      <TodoApp />
     </div>
   );
 };
