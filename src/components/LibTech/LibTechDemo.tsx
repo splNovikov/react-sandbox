@@ -7,7 +7,7 @@ const LibTechDemo = (): ReactElement => {
   useEffect(() => {
     const timer = setInterval(() => {
       setProgress((v) => {
-        const updV = v + 1;
+        const updV = v + 5;
 
         if (updV === 100) {
           clearInterval(timer);
