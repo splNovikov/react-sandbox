@@ -1,14 +1,21 @@
-import { useCallback, useRef, useState } from 'react';
-import axios from 'axios';
+import { useCallback, useRef, useState } from "react";
+import axios from "axios";
 
-import { IResponse, IStarWarsUsersHook, IUser } from './StarWarsList.Interfaces';
+import {
+  IResponse,
+  IStarWarsUsersHook,
+  IUser,
+} from "./StarWarsList.Interfaces";
 
-const baseUrl = 'https://swapi.dev/api/people/?page=1';
-const searchUrl = 'https://swapi.dev/api/people/?search=';
+const baseUrl = "https://swapi.dev/api/people/?page=1";
+const searchUrl = "https://swapi.dev/api/people/?search=";
 
 const getUsersAxios = (url: string): Promise<IResponse> => axios.get(url);
 
-const useDebounce = (callback: any, delay: number): ((...args: any[]) => void) => {
+const useDebounce = (
+  callback: any,
+  delay: number
+): ((...args: any[]) => void) => {
   const timer = useRef();
 
   return useCallback(
@@ -21,14 +28,14 @@ const useDebounce = (callback: any, delay: number): ((...args: any[]) => void) =
         callback(...args);
       }, delay);
     },
-    [callback, delay],
+    [callback, delay]
   );
 };
 
 const useStarWarsUsers = (): IStarWarsUsersHook => {
   const [isLoading, setIsLoading] = useState(false);
-  const [users, setUsers] = useState([] as IUser[]);
-  const nextUrl = useRef(baseUrl as string | null);
+  const [users, setUsers] = useState<IUser[]>([]);
+  const nextUrl = useRef<string | null>(baseUrl);
 
   const handleResponse = (response: IResponse): void => {
     const res = response?.data?.results || [];
@@ -47,7 +54,7 @@ const useStarWarsUsers = (): IStarWarsUsersHook => {
 
   const loadMore = (): void => {
     if (!nextUrl.current) {
-      alert('No next url');
+      alert("No next url");
       return;
     }
 
