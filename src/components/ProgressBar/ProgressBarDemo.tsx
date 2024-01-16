@@ -1,7 +1,7 @@
 import { ReactElement, useEffect, useState } from "react";
-import LibTech from "./LibTech";
+import ProgressBar from "./ProgressBar";
 
-const LibTechDemo = (): ReactElement => {
+const ProgressBarDemo = (): ReactElement => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const LibTechDemo = (): ReactElement => {
     return () => clearInterval(timer);
   }, []);
 
-  return <LibTech value={progress} />;
+  return <ProgressBar value={progress} />;
 };
 
-export default LibTechDemo;
+export default ProgressBarDemo;

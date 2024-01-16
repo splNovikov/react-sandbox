@@ -6,17 +6,18 @@ import React, { FC } from "react";
 // import PureComponent from '../PureComponent/PureComponent';
 // import Timer from '../Timer/Timer';
 // import TimerUseTimeout from '../TimerUseTimeout/TimerUseTimeout';
-import Space from "../Rockets/Space/Space";
-// import LibTechDemo from "../LibTech/LibTechDemo";
+// import Space from "../Rockets/Space/Space";
 // import { WindowListener } from "../WindowListener/WindowListener";
+import ProgressBarDemo from "../ProgressBar/ProgressBarDemo";
+// import TodoApp from "../TodoApp/TodoApp";
+// import TypeaheadDemo from "../Typeahead/TypeaheadDemo";
 
 import "./App.scss";
-import TypeaheadDemo from "../Typeahead/TypeaheadDemo";
 
 const App: FC = () => {
   return (
     <div className="App">
-      <TypeaheadDemo />
+      <ProgressBarDemo />
     </div>
   );
 };
