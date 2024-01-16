@@ -11,11 +11,12 @@ import Space from "../Rockets/Space/Space";
 // import { WindowListener } from "../WindowListener/WindowListener";
 
 import "./App.scss";
+import TypeaheadDemo from "../Typeahead/TypeaheadDemo";
 
 const App: FC = () => {
   return (
     <div className="App">
-      <Space />
+      <TypeaheadDemo />
     </div>
   );
 };
