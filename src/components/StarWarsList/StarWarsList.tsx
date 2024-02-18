@@ -10,6 +10,7 @@ const StarWarsList: FC = () => {
   const btnText = users.length ? 'Load More' : 'Load Users';
 
   const changeInputValue = (e: any): void => {
+    console.log(e);
     searchUser(e?.currentTarget?.value?.trim());
   };
 
