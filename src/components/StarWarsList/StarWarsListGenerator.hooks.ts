@@ -6,7 +6,18 @@ import { IResponse, IStarWarsUsersHookGen, IUser } from './StarWarsList.Interfac
 const searchUrl = (pageNum: number, search: string): string =>
   `https://swapi.dev/api/people/?search=${search}&page=${pageNum}`;
 
-const getUsersAxios = (url: string): Promise<IResponse> => axios.get(url);
+const getUsersAxios = (url: string): Promise<IResponse> => axios.get(url, {
+  params: {
+    filter: {
+      bbox: "40.812394632534016,-74.46562201144602,40.71774361328152,-74.33584601046945",
+      // bbox2: [40.812394632534016, -74.46562201144602,40.71774361328152,-74.33584601046945],
+      // bbox3: ["40.812394632534016", "-74.46562201144602", "40.71774361328152", "-74.33584601046945"],
+      status: 'WAITING_ATTRIBUTION',
+      without_blocker: 1
+    },
+    boole: true
+  }
+});
 
 const useDebounce = (callback: any, delay: number): ((...args: any[]) => void) => {
   const timer = useRef();
