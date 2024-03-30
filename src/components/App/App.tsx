@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-// import RerenderCounter from '../RerenderCounter/RerenderCounter';
+// import RerenderCounter from "../RerenderCounter/RerenderCounter";
 // import Box from '../Box/Box';
 // import StarWarsList from "../StarWarsList/StarWarsList";
 // import PureComponent from '../PureComponent/PureComponent';
@@ -11,14 +11,15 @@ import React, { FC } from "react";
 // import ProgressBarDemo from "../ProgressBar/ProgressBarDemo";
 // import TodoApp from "../TodoApp/TodoApp";
 // import TypeaheadDemo from "../Typeahead/TypeaheadDemo";
+import Index from "../Js";
+import StarWarsV2 from "../StarWarsV2/StarWarsV2";
 
 import "./App.scss";
-import Index from "../Js";
 
 const App: FC = () => {
   return (
     <div className="App">
-      <Index />
+      <StarWarsV2 />
     </div>
   );
 };
