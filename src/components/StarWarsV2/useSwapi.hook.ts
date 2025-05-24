@@ -4,7 +4,7 @@ export const useSwapi = () => {
 
   const getUrl = useCallback(
     (search: string): string =>
-      `https://swapi.dev/api/people/?search=${search}&page=1`,
+      `https://swapi.tech/api/people/?search=${search}&page=1`,
     []
   );
 
